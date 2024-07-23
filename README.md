@@ -3,7 +3,7 @@
 ### Usage
 ```bash
 $ python cli.py <string>
-``
+```
 
 ### example
 ```bash
