@@ -6,7 +6,7 @@ authors = [
     {name = "j25ng", email = "jsan2861@gmail.com"},
 ]
 dependencies = []
-requires-python = "==3.11.*"
+requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
 
@@ -14,4 +14,4 @@ license = {text = "MIT"}
 cli = 'my_history.cli:cnt'
 
 [tool.pdm]
-distribution = false
+distribution = true 
