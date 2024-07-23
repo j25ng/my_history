@@ -7,3 +7,5 @@ def cnt():
     fdf = df[df['cmd'].str.contains(INPUT)]
     cnt = fdf['cnt'].sum()
     print(cnt)
+
+cnt()
