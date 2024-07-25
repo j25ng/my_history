@@ -13,11 +13,13 @@ def argp():
 
     if args.count:
         cnt(args.count)
-    elif args.top and args.date:
-        top(args.top, args.date)
+    elif args.top:
+        if args.date:
+            top(args.top, args.date)
+        else:
+            perser.error("-t 옵션은 -d 옵션과 함께 사용하십시오.")
     else:
         parser.print_help()
-        perser.error("-t 옵션은 -d 옵션과 함께 사용하십시오.")
 
 def cnt(q):
     df = pd.read_parquet('~/data/parquet')
