@@ -13,7 +13,7 @@ def cmd():
                     epilog='Text at the bottom of help')
 
     parser.add_argument('-s', '--scount') 
-    parser.add_argument('-t', '--top')
+    parser.add_argument('-t', '--top', type=int)
     parser.add_argument('-d', '--dt' )
     parser.add_argument('-p', '--pretty', action='store_true')
 

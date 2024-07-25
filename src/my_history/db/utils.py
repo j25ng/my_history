@@ -1,4 +1,5 @@
 import pandas as pd
+from tabulate import tabulate
 
 def read_data(path='~/data/parquet'):
     df = pd.read_parquet(path)

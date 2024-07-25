@@ -18,8 +18,8 @@ Homepage = "https://github.com/j25ng/my_history"
 Issues = "https://github.com/j25ng/my_history/issues"
 
 [project.scripts]
-cnt = "my_history.cli:query"
-my-history = "my_history.arg_parse:argp"
+my-history = "my_history.cli:cmd"
+history-parse = "my_history.arg_parse:argp"
 my-history-test = "my_history.arg_parse_test:argp"
 
 [tool.pdm]
@@ -38,6 +38,6 @@ giti = "pip install git+https://github.com/j25ng/my_history.git@0.2.0/args"
 
 [tool.pdm.dev-dependencies]
 test = [
-    "pytest>=8.3.1",
+    "pytest>=8.3.2",
     "pytest-cov>=5.0.0",
 ]
