@@ -29,4 +29,3 @@ def top(n, date):
     fdf = df[df['dt'] == date].sort_values(by='cnt', ascending=False).head(n)
     ddf = fdf.drop(columns=['dt']).to_string(index=False)
     print(ddf)
-
