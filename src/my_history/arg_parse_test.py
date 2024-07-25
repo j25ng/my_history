@@ -14,8 +14,8 @@ def argp():
     df = pd.read_parquet('~/data/parquet')
 
     if args.count:
-        cnt(args.count)
-    elif:
+        cnt(df, args.count)
+    elif args.date or args.top:
         if args.date:
             df = date(df, args.date)
         if args.top:
@@ -25,13 +25,12 @@ def argp():
         parser.print_help()
 
 def cnt(df, q):
-    df = pd.read_parquet('~/data/parquet')
     fdf = df[df['cmd'] == q ]
     cnt = fdf['cnt'].sum()
     print(f'{q} 사용 횟수는 {cnt}회 입니다.')
 
-def date(df, dt):
-    fdf = df[df['df'] == date].sort_values(by='cnt', ascending=False)
+def date(df, date):
+    fdf = df[df['dt'] == date].sort_values(by='cnt', ascending=False)
     return fdf
 
 def top(df, n):
