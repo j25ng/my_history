@@ -13,6 +13,6 @@ license = {text = "MIT"}
 [project.scripts]
 cnt = "my_history.cli:query"
 my-history = "my_history.arg_parse:argp"
-my-history-test = "my_history.arg_parse_test:grap"
+my-history-test = "my_history.arg_parse_test:argp"
 [tool.pdm]
 distribution = true 
