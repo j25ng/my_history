@@ -25,15 +25,3 @@ $ my-history -c ls
 $ my-history -t 10 -d 2024-07-17
 ```
 ![image](https://github.com/user-attachments/assets/f3f50f3f-6758-49e9-9a36-7b9a9b40856b)
-
-## v0.2.1 Use tabulate
-### Usage
-```bash
-$ pip install tabulate
-$ my-history -t <line> -d <date> -p
-```
-### example
-```bash
-$ my-history -t 3 -d 2024-07-17 -p
-```
-![image](https://github.com/user-attachments/assets/1a176b15-189b-48d1-ba88-0336a8db2e3b)
