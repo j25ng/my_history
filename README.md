@@ -1,4 +1,5 @@
 # my_history
+- parquet 파일의 정보를 cli 기반으로 조회
 ## v0.1.0 Basic
 ### Usage
 ```bash
@@ -13,7 +14,6 @@ $ cnt cd
 ![image](https://github.com/user-attachments/assets/62a9989c-a0cf-4770-8992-df9711f3def4)
 
 ## v0.2.0 Use python argparse
-
 ### requirements
 ```bash
 $ my-history -s ls
@@ -31,6 +31,22 @@ mkdir 1932
  sudo 1320
   pdm 1220
    rm 1104
+```
+
+### Dev env setting
+```bash
+$ git clone <URL>
+$ cd <PJT_NAME>
+$ pdm install
+$ [pdm test|pytest]
+
+# option
+$ pdm add -dG test pytest pytest-cov
+```
+
+### ref
+```bash
+- https://pdm-project.org/en/latest/usage/dependency/#add-development-only-dependencies
 ```
 
 ### Usage
