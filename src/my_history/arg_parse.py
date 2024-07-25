@@ -1,24 +1,20 @@
 import pandas as pd
 import argparse
 import sys
-from tabulate import tabulate
 
 def argp():
     parser = argparse.ArgumentParser(description="history search programm")
     group = parser.add_argument_group()
-    group.add_argument("-c", "--count", type=str, help="my-history -c <cmd>")
-    group.add_argument("-t", "--top", type=int, help="my-history -t <num>")
-    group.add_argument("-d", "--date", type=str, help="my-history -d <date>")
-    group.add_argument("-p", "--pretty", action='store_true', help="my-history -p")
+    group.add_argument("-c", "--count", type=str, action="store", help="my-history -c <cmd>")
+    group.add_argument("-t", "--top", type=int, action="store", help="my-history -t <num>")
+    group.add_argument("-d", "--date", type=str, action="store", help="my-history -d <date>")
+
     args = parser.parse_args()
 
     if args.count:
         cnt(args.count)
-    elif args.top:
-        if args.date:
-            top(args.top, args.date)
-        else:
-            perser.error("-t 옵션은 -d 옵션과 함께 사용하십시오.")
+    elif args.top and args.date:
+        top(args.top, args.date)
     else:
         parser.print_help()
 
@@ -31,8 +27,5 @@ def cnt(q):
 def top(n, date):
     df = pd.read_parquet('~/data/parquet')
     fdf = df[df['dt'] == date].sort_values(by='cnt', ascending=False).head(n)
-    ddf = fdf.drop(columns=['dt'])
-    print(tabulate(ddf, headers=["", "cmd", "cnt"], tablefmt="pipe"))
-
-def pretty():
-
+    ddf = fdf.drop(columns=['dt']).to_string(index=False)
+    print(ddf)
