@@ -17,6 +17,7 @@ def argp():
         top(args.top, args.date)
     else:
         parser.print_help()
+        perser.error("-t 옵션은 -d 옵션과 함께 사용하십시오.")
 
 def cnt(q):
     df = pd.read_parquet('~/data/parquet')
