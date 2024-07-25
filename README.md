@@ -16,7 +16,8 @@ $ cnt cd
 ### Usage
 ```bash
 $ my-history -c <cmd>
-$ my-history -t <line> -d <date>
+$ my-history -t <line>
+$ my-history -d <date>
 ```
 ### example
 ```bash
