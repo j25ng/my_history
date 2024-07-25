@@ -22,6 +22,17 @@ my-history-test = "my_history.arg_parse_test:argp"
 [tool.pdm]
 distribution = true 
 
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
+
+[tool.pdm.scripts]
+test = "pytest"
+ctest = "pytest --cov"
+stest = "pytest -s"
+giti = "pip install git+https://github.com/j25ng/my_history.git@0.2.0/args"
+
 [tool.pdm.dev-dependencies]
 test = [
     "pytest>=8.3.1",
